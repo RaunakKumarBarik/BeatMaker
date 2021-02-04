@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
     const sounds = document.querySelectorAll(".sound");
-    const pads = document.querySelectorAll(".pads div");
+    const pads = document.querySelectorAll(".padsbox div");
     const visual = document.querySelector(".visual");
     const colors = [
         "#60d394",
@@ -33,3 +33,16 @@ window.addEventListener('load', () => {
         });
     }
 });
+
+function toggleMode(x)
+{
+    x.classList.toggle("fa-moon-o");
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+    var txt1 = document.getElementById("txt1");
+    var txt2 = document.getElementById("txt2");
+    var txt3 = document.getElementById("txt3");
+    txt1.classList.toggle("light");
+    txt2.classList.toggle("light");
+    txt3.classList.toggle("light");
+}
